@@ -1,0 +1,58 @@
+site_name: Heureka Offer Feed XML Documentation
+site_description: Documentation for Heureka Offer Feed XML specification
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.follow
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Field Reference:
+    - Required Fields:
+      - ITEM_ID: fields/item_id.md
+      - PRODUCTNAME: fields/productname.md
+      - URL: fields/url.md
+      - IMGURL: fields/imgurl.md
+      - PRICE_VAT: fields/price_vat.md
+      - CATEGORYTEXT: fields/categorytext.md
+      - DELIVERY_DATE: fields/delivery_date.md
+      - DELIVERY: fields/delivery.md
+    - Optional Fields:
+      - IMGURL_ALTERNATIVE: fields/imgurl_alternative.md
+      - PRODUCT: fields/product.md
+      - DESCRIPTION: fields/description.md
+      - VAT: fields/vat.md
+      - MANUFACTURER: fields/manufacturer.md
+      - MANUFACTURER_POSTAL_ADDRESS: fields/manufacturer_postal_address.md
+      - MANUFACTURER_ELECTRONIC_ADDRESS: fields/manufacturer_electronic_address.md
+      - EAN: fields/ean.md
+      - ISBN: fields/isbn.md
+      - ITEM_TYPE: fields/item_type.md
+      - HEUREKA_CPC: fields/heureka_cpc.md
+      - ITEMGROUP_ID: fields/itemgroup_id.md
+      - ACCESSORY: fields/accessory.md
+      - SPECIAL_SERVICE: fields/special_service.md
+      - PARAM: fields/param.md
+      - EXTENDED_WARRANTY: fields/extended_warranty.md
+      - SALES_VOUCHER: fields/sales_voucher.md
+      - GIFT: fields/gift.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true

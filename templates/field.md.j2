@@ -1,0 +1,150 @@
+{% set title = field.display_name or field.name | snake_to_title %}
+# {{ title }}
+
+## Overview
+
+**Element Name:** `{{ field.name }}`  
+**Type:** {{ field.field_type.value }}  
+**Architecture:** {{ field.archetype.value | title | replace("_", " ") }}  
+**Required:** {{ "Yes" if field.required else "No" }}  
+{% if field.multiple -%}
+**Multiple:** Yes{% if field.max_occurs %} (max {{ field.max_occurs }}){% endif %}  
+{% endif -%}
+{% if field.category -%}
+**Category:** {{ field.category }}  
+{% endif %}
+
+{{ field.description }}
+
+{% if field.deprecated -%}
+!!! warning "Deprecated"
+    {{ field.deprecation_note or "This field is deprecated and should not be used in new implementations." }}
+{% endif %}
+
+{% if field.archetype.value == "complex_conditional" -%}
+{% if field.conditional_validation -%}
+**Validation Rule:** {{ field.conditional_validation }}
+{% endif %}
+
+### Child Elements
+
+{% for child in field.child_elements -%}
+#### {{ child.name }}
+
+- **Type:** {{ child.field_type.value }}
+- **Required:** {{ "Yes" if child.required else "No" }} (when parent has content)
+- **Description:** {{ child.description }}
+
+{% if child.max_length -%}
+- **Max Length:** {{ child.max_length }}
+{% endif -%}
+{% if child.pattern -%}
+- **Pattern:** `{{ child.pattern }}`
+{% endif -%}
+{% if child.enum_values -%}
+- **Allowed Values:** {{ child.enum_values | join(", ") }}
+{% endif -%}
+{% if child.examples -%}
+- **Examples:** {{ child.examples | map(attribute='value') | join(", ") }}
+{% endif %}
+
+{% endfor -%}
+
+{% elif field.archetype.value == "attribute_based" -%}
+## Attribute-Based Field
+
+{% if field.has_text_content -%}
+This field has both text content and XML attributes.
+
+{% if field.content_max_length -%}
+**Text content max length:** {{ field.content_max_length }} characters
+{% endif %}
+{% else -%}
+This field contains only XML attributes (no text content).
+{% endif %}
+
+### Attributes
+
+{% for attr in field.attributes -%}
+#### {{ attr.name }}
+
+- **Type:** {{ attr.field_type.value }}
+- **Required:** {{ "Yes" if attr.required else "No" }}
+- **Description:** {{ attr.description }}
+{% if attr.max_length -%}
+- **Max Length:** {{ attr.max_length }}
+{% endif -%}
+{% if attr.pattern -%}
+- **Pattern:** `{{ attr.pattern }}`
+{% endif -%}
+{% if attr.enum_values -%}
+- **Allowed Values:** {{ attr.enum_values | join(", ") }}
+{% endif -%}
+{% if attr.examples -%}
+- **Examples:** {{ attr.examples | map(attribute='value') | join(", ") }}
+{% endif %}
+
+{% endfor -%}
+{% endif %}
+
+## General Constraints
+
+{% if field.required -%}
+- **Required field** - must be present in the XML
+{% else -%}
+- **Optional field** - can be omitted
+{% endif -%}
+{% if field.multiple -%}
+- **Multiple occurrences** allowed{% if field.max_occurs %} (maximum {{ field.max_occurs }}){% endif %}
+
+{% endif -%}
+{% if field.max_length -%}
+- **Maximum length:** {{ field.max_length }} characters
+{% endif -%}
+{% if field.min_length -%}
+- **Minimum length:** {{ field.min_length }} characters
+{% endif -%}
+{% if field.pattern -%}
+- **Pattern:** `{{ field.pattern }}`
+{% endif -%}
+{% if field.min_value is not none -%}
+- **Minimum value:** {{ field.min_value }}
+{% endif -%}
+{% if field.max_value is not none -%}
+- **Maximum value:** {{ field.max_value }}
+{% endif -%}
+{% if field.enum_values -%}
+- **Allowed values:**
+{% for value in field.enum_values %}
+  - `{{ value }}`
+{% endfor -%}
+{% endif %}
+
+## XML Examples
+
+{% set xml_examples = field.get_example_xml() -%}
+{% if xml_examples -%}
+{% for example in xml_examples -%}
+```xml
+{{ example }}
+```
+
+{% endfor -%}
+{% endif %}
+
+
+{% if field.related_fields -%}
+## Related Fields
+
+{% for related in field.related_fields -%}
+- **{{ related.field_name }}** ({{ related.relationship }}){% if related.description %}: {{ related.description }}{% endif %}
+{% endfor -%}
+{% endif %}
+
+{% if field.validation_rules -%}
+## Validation Rules
+
+{% for rule in field.validation_rules -%}
+- **{{ rule.rule_type }}**: {{ rule.value }} ({{ rule.level.value }}){% if rule.message %} - {{ rule.message }}{% endif %}
+{% endfor -%}
+{% endif %}

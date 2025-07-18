@@ -1,0 +1,63 @@
+# Heureka Offer Feed XML Documentation
+
+Welcome to the comprehensive documentation for the Heureka Offer Feed XML specification. This documentation is automatically generated from validated field definitions to ensure accuracy and consistency.
+
+## Overview
+
+**Version:** {{ collection.version }}  
+{% if collection.last_updated -%}
+**Last Updated:** {{ collection.last_updated }}  
+{% endif %}
+**Total Fields:** {{ collection.fields | length }}  
+**Required Fields:** {{ collection.get_required_fields() | length }}
+
+{% if collection.description -%}
+{{ collection.description }}
+{% endif %}
+
+## Quick Start
+
+The XML feed follows this basic structure:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SHOP>
+  <SHOPITEM>
+    <!-- Required fields -->
+    <ITEM_ID>product_123</ITEM_ID>
+    <PRODUCTNAME>Samsung Galaxy S24</PRODUCTNAME>
+    <URL>https://example.com/product/123</URL>
+    <PRICE_VAT>25000</PRICE_VAT>
+    <CATEGORYTEXT>Heureka.cz | Electronics | Mobile Phones</CATEGORYTEXT>
+    
+    <!-- Complex conditional field examples -->
+    <PARAM>
+      <VAL>128GB</VAL>
+      <PARAM_NAME>Storage</PARAM_NAME>
+    </PARAM>
+    <PARAM/> <!-- Empty parameter -->
+    
+    <DELIVERY>
+      <DELIVERY_ID>PPL</DELIVERY_ID>
+      <DELIVERY_PRICE>99</DELIVERY_PRICE>
+    </DELIVERY>
+    
+    <!-- Attribute-based field example -->
+    <GIFT ID="gift_123">Free wireless headphones</GIFT>
+    
+    <!-- Other optional fields... -->
+  </SHOPITEM>
+</SHOP>
+```
+
+## Complete Field Reference
+
+| Field Name | Display Name | Type | Architecture | Required | Description |
+|------------|--------------|------|--------------|----------|-------------|
+{% for field in collection.fields -%}
+| [`{{ field.name }}`](fields/{{ field.name.lower() }}.md) | {{ field.display_name or (field.name | snake_to_title) }} | {{ field.field_type.value }} | {{ field.archetype.value }} | {{ "✓" if field.required else "○" }} | {{ field.description | truncate(80) }} |
+{% endfor %}
+
+---
+
+*This documentation is automatically generated from the field definitions. For questions or issues, please contact the development team.*
