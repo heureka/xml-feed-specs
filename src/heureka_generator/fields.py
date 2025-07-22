@@ -269,7 +269,7 @@ def create_delivery_field() -> Field:
         description="Delivery price for prepayment orders. Numeric value with optional decimal places.",
         required=True,
         pattern=r"\d+([.,]\d{1,2})?",
-        examples=[{"value": "99"}, {"value": "120.50"}],
+        examples=[{"value": "99.5"}],
     )
 
     delivery_price_cod_field = Field(

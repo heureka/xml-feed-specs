@@ -31,7 +31,7 @@ Shipping method information. Maximum 100 different shipping methods. Must contai
 - **Description:** Delivery price for prepayment orders. Numeric value with optional decimal places.
 
 - **Pattern:** `\d+([.,]\d{1,2})?`
-- **Examples:** 99, 120.50
+- **Examples:** 99.5
 
 #### DELIVERY_PRICE_COD
 
@@ -53,8 +53,7 @@ Shipping method information. Maximum 100 different shipping methods. Must contai
 ```xml
 <DELIVERY>
   <DELIVERY_ID>PPL</DELIVERY_ID>
-  <DELIVERY_PRICE>99</DELIVERY_PRICE>
-  <DELIVERY_PRICE>120.50</DELIVERY_PRICE>
+  <DELIVERY_PRICE>99.5</DELIVERY_PRICE>
   <DELIVERY_PRICE_COD>149</DELIVERY_PRICE_COD>
 </DELIVERY>
 ```
