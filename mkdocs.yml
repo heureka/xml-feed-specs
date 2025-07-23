@@ -1,5 +1,6 @@
 site_name: Heureka Offer Feed XML Documentation
 site_description: Documentation for Heureka Offer Feed XML specification
+site_url: https://heureka.github.io/xml-feed-specs/
 docs_dir: docs
 
 theme:
