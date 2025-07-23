@@ -42,6 +42,14 @@ docs/              # Generated output
 
 ## Development
 
+This project uses pre-commit hooks to ensure code quality and consistent commit messages.
+
+```bash
+uv run pre-commit install
+uv run pre-commit install --hook-type commit-msg
+uv run pre-commit run --all-files
+```
+
 Generate and serve documentation:
 
 ```bash
