@@ -1,5 +1,8 @@
 # xml-feed-specs
 
+> [!IMPORTANT]
+> This repository generates documentation that may not yet be fully accurate or complete. For production use, please always verify information against the [official documentation](https://sluzby.heureka.cz/napoveda/xml-feed/) until this project reaches stable version v1.0.0.
+
 Model-first documentation generator for Heureka Offer Feed XML specification. Generates MkDocs documentation from programmatically defined field models using Jinja2 templates.
 
 ## Installation
