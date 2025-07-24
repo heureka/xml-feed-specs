@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Element Name:** `PRICE_VAT`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** Yes  
+**Element Name:** `PRICE_VAT`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** Yes<br>
 
-Final product price including VAT in Czech Koruna (CZK). Maximum 2 decimal places. Supports formats: 25000, 25000.50, 25000,50.
-
+Final product price including VAT in Czech Koruna (CZK). Maximum 2 decimal places.
+Supports formats: 25000, 25000.50, 25000,50.
 
 
 ## General Constraints

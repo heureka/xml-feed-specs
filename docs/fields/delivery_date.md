@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `DELIVERY_DATE`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** Yes  
+**Element Name:** `DELIVERY_DATE`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** Yes<br>
 
 Expected delivery time. Can be number of days (1-999) or specific date in YYYY-MM-DD format.
-
 
 
 ## General Constraints

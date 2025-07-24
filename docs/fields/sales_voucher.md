@@ -2,16 +2,14 @@
 
 ## Overview
 
-**Element Name:** `SALES_VOUCHER`  
-**Type:** string  
-**Architecture:** Complex conditional  
-**Required:** No  
-**Multiple:** Yes  
+**Element Name:** `SALES_VOUCHER`<br>
+**Type:** string<br>
+**Architecture:** Complex conditional<br>
+**Required:** No<br>
+**Multiple:** Yes<br>
+**Validation Rule:** Must be either empty or contain both CODE and DESC<br>
 
 Sales voucher or discount code. Must contain both CODE and DESC elements when present.
-
-
-**Validation Rule:** Must be either empty or contain both CODE and DESC
 
 ### Child Elements
 

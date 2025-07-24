@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Element Name:** `ISBN`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `ISBN`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
-International Standard Book Number. Accepts ISBN-10 (10 digits with possible X) or ISBN-13 (13 digits) format.
-
+International Standard Book Number. Accepts ISBN-10 (10 digits with possible X) or
+ISBN-13 (13 digits) format.
 
 
 ## General Constraints

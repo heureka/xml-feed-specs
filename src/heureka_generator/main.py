@@ -9,9 +9,7 @@ from .generator import generate_documentation
 
 def main() -> None:
     """Main CLI function."""
-    parser = argparse.ArgumentParser(
-        description="Generate MkDocs documentation from Heureka XML field definitions"
-    )
+    parser = argparse.ArgumentParser(description="Generate MkDocs documentation from Heureka XML field definitions")
     parser.add_argument(
         "--template-dir",
         type=Path,

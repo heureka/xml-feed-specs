@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Element Name:** `CATEGORYTEXT`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** Yes  
+**Element Name:** `CATEGORYTEXT`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** Yes<br>
 
-Product category path. Must start with "Heureka.cz |" followed by category hierarchy. Maximum 255 characters.
-
+Product category path. Must start with "Heureka.cz |" followed by category hierarchy.
+Maximum 255 characters.
 
 
 ## General Constraints

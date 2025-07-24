@@ -3,29 +3,27 @@
 
 ## Overview
 
-**Element Name:** `{{ field.name }}`  
-**Type:** {{ field.field_type.value }}  
-**Architecture:** {{ field.archetype.value | title | replace("_", " ") }}  
-**Required:** {{ "Yes" if field.required else "No" }}  
+**Element Name:** `{{ field.name }}`<br>
+**Type:** {{ field.field_type.value }}<br>
+**Architecture:** {{ field.archetype.value | title | replace("_", " ") }}<br>
+**Required:** {{ "Yes" if field.required else "No" }}<br>
 {% if field.multiple -%}
-**Multiple:** Yes{% if field.max_occurs %} (max {{ field.max_occurs }}){% endif %}  
+**Multiple:** Yes{% if field.max_occurs %} (max {{ field.max_occurs }}){% endif %}<br>
 {% endif -%}
 {% if field.category -%}
-**Category:** {{ field.category }}  
+**Category:** {{ field.category }}<br>
+{% endif %}
+{% if field.deprecated -%}
+!!! warning "Deprecated"
+    {{ field.deprecation_note or "This field is deprecated and should not be used in new implementations." }}<br>
+{% endif %}
+{% if field.conditional_validation -%}
+**Validation Rule:** {{ field.conditional_validation }}<br>
 {% endif %}
 
 {{ field.description }}
 
-{% if field.deprecated -%}
-!!! warning "Deprecated"
-    {{ field.deprecation_note or "This field is deprecated and should not be used in new implementations." }}
-{% endif %}
-
 {% if field.archetype.value == "complex_conditional" -%}
-{% if field.conditional_validation -%}
-**Validation Rule:** {{ field.conditional_validation }}
-{% endif %}
-
 ### Child Elements
 
 {% for child in field.child_elements -%}

@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `VAT`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `VAT`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
 VAT rate percentage applied to the product (e.g., "21" for 21% VAT).
-
 
 
 ## General Constraints

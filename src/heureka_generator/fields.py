@@ -10,7 +10,8 @@ def create_required_fields() -> list[Field]:
             name="ITEM_ID",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="Unique product identifier within the e-shop. Maximum 36 characters. Allowed characters: a-z, A-Z, 0-9, underscore, hyphen.",
+            description="""Unique product identifier within the e-shop. Maximum 36 characters.
+Allowed characters: a-z, A-Z, 0-9, underscore, hyphen.""",
             required=True,
             max_length=36,
             pattern=r"[a-zA-Z0-9_-]{1,36}",
@@ -20,7 +21,8 @@ def create_required_fields() -> list[Field]:
             name="PRODUCTNAME",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="Basic product name that includes all mandatory category-specific information. Maximum 200 characters.",
+            description="""Basic product name that includes all mandatory category-specific information.
+Maximum 200 characters.""",
             required=True,
             max_length=200,
             examples=[{"value": "Samsung Galaxy S24"}],
@@ -29,7 +31,8 @@ def create_required_fields() -> list[Field]:
             name="URL",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="Unique product page URL that displays price and add-to-cart option. Maximum 300 characters. Must be unique for each product variant.",
+            description="""Unique product page URL that displays price and add-to-cart option. Maximum 300 characters.
+Must be unique for each product variant.""",
             required=True,
             max_length=300,
             pattern=r"https?://[^\s]{1,290}",
@@ -49,7 +52,8 @@ def create_required_fields() -> list[Field]:
             name="PRICE_VAT",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="Final product price including VAT in Czech Koruna (CZK). Maximum 2 decimal places. Supports formats: 25000, 25000.50, 25000,50.",
+            description="""Final product price including VAT in Czech Koruna (CZK). Maximum 2 decimal places.
+Supports formats: 25000, 25000.50, 25000,50.""",
             required=True,
             pattern=r"\d+([.,]\d{1,2})?",
             examples=[{"value": "25000"}, {"value": "25000.50"}],
@@ -58,7 +62,8 @@ def create_required_fields() -> list[Field]:
             name="CATEGORYTEXT",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description='Product category path. Must start with "Heureka.cz |" followed by category hierarchy. Maximum 255 characters.',
+            description="""Product category path. Must start with "Heureka.cz |" followed by category hierarchy.
+Maximum 255 characters.""",
             required=True,
             max_length=255,
             pattern=r"Heureka\.cz \|.*",
@@ -111,7 +116,7 @@ def create_optional_fields() -> list[Field]:
             name="VAT",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="VAT rate percentage applied to the product (e.g., \"21\" for 21% VAT).",
+            description='VAT rate percentage applied to the product (e.g., "21" for 21% VAT).',
             required=False,
             examples=[{"value": "21"}],
         ),
@@ -136,7 +141,8 @@ def create_optional_fields() -> list[Field]:
             name="ISBN",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="International Standard Book Number. Accepts ISBN-10 (10 digits with possible X) or ISBN-13 (13 digits) format.",
+            description="""International Standard Book Number. Accepts ISBN-10 (10 digits with possible X) or
+ISBN-13 (13 digits) format.""",
             required=False,
             pattern=r"\d{9}[\dX]|\d{13}",
             examples=[{"value": "9781234567890"}, {"value": "123456789X"}],
@@ -163,7 +169,10 @@ def create_optional_fields() -> list[Field]:
             archetype=ArchetypeType.SIMPLE,
             description="Manufacturer's electronic contact (email address or website URL) for support and inquiries.",
             required=False,
-            examples=[{"value": "support@manufacturer.com"}, {"value": "https://manufacturer.com"}],
+            examples=[
+                {"value": "support@manufacturer.com"},
+                {"value": "https://manufacturer.com"},
+            ],
         ),
         Field(
             name="HEUREKA_CPC",
@@ -178,7 +187,8 @@ def create_optional_fields() -> list[Field]:
             name="ITEMGROUP_ID",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="Group identifier for product variants (color, size, pattern variations). Maximum 36 characters. Links related product variants together.",
+            description="""Group identifier for product variants (color, size, pattern variations).
+Maximum 36 characters. Links related product variants together.""",
             required=False,
             max_length=36,
             pattern=r"[a-zA-Z0-9_-]{1,36}",
@@ -200,12 +210,16 @@ def create_optional_fields() -> list[Field]:
             name="SPECIAL_SERVICE",
             field_type=FieldType.STRING,
             archetype=ArchetypeType.SIMPLE,
-            description="Special service offered with the product (e.g., installation, setup, training). Maximum 5 services, each up to 128 characters.",
+            description="""Special service offered with the product (e.g., installation, setup, training).
+Maximum 5 services, each up to 128 characters.""",
             required=False,
             multiple=True,
             max_occurs=5,
             max_length=128,
-            examples=[{"value": "Free installation"}, {"value": "Extended warranty setup"}],
+            examples=[
+                {"value": "Free installation"},
+                {"value": "Extended warranty setup"},
+            ],
         ),
     ]
 
@@ -286,7 +300,8 @@ def create_delivery_field() -> Field:
         name="DELIVERY",
         field_type=FieldType.STRING,
         archetype=ArchetypeType.COMPLEX_CONDITIONAL,
-        description="Shipping method information. Maximum 100 different shipping methods. Must contain DELIVERY_ID and DELIVERY_PRICE when present.",
+        description="""Shipping method information. Maximum 100 different shipping methods.
+Must contain DELIVERY_ID and DELIVERY_PRICE when present.""",
         required=True,
         multiple=True,
         max_occurs=100,
@@ -325,7 +340,8 @@ def create_param_field() -> Field:
         name="PARAM",
         field_type=FieldType.STRING,
         archetype=ArchetypeType.COMPLEX_CONDITIONAL,
-        description="Product parameter with name-value pair. Must contain both VAL and PARAM_NAME elements when present.",
+        description="""Product parameter with name-value pair. Must contain both VAL and PARAM_NAME elements
+when present.""",
         required=False,
         multiple=True,
         conditional_validation="Must be either empty or contain both VAL and PARAM_NAME",
@@ -360,7 +376,8 @@ def create_extended_warranty_field() -> Field:
         name="EXTENDED_WARRANTY",
         field_type=FieldType.STRING,
         archetype=ArchetypeType.COMPLEX_CONDITIONAL,
-        description="Extended warranty option. Must contain both VAL (warranty period) and DESC (warranty description) when present.",
+        description="""Extended warranty option. Must contain both VAL (warranty period) and DESC (warranty description)
+when present.""",
         required=False,
         multiple=True,
         conditional_validation="Must be either empty or contain both VAL and DESC",
@@ -421,7 +438,8 @@ def create_gift_field() -> Field:
         name="GIFT",
         field_type=FieldType.STRING,
         archetype=ArchetypeType.ATTRIBUTE_BASED,
-        description="Gift item with description and ID. Content describes the gift (max 250 characters), ID attribute references the gift product.",
+        description="""Gift item with description and ID. Content describes the gift (max 250 characters),
+ID attribute references the gift product.""",
         required=False,
         multiple=True,
         has_text_content=True,
@@ -453,5 +471,6 @@ def create_field_collection() -> FieldCollection:
     return FieldCollection(
         fields=fields,
         version="1.0",
-        description="Heureka Offer Feed XML format allows e-shops to submit product information to Heureka.cz for price comparison and shopping services.",
+        description="""Heureka Offer Feed XML format allows e-shops to submit product information to Heureka.cz for
+price comparison and shopping services.""",
     )

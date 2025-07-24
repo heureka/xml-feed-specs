@@ -4,11 +4,12 @@ Welcome to the comprehensive documentation for the Heureka Offer Feed XML specif
 
 ## Overview
 
-**Version:** 1.0  
-**Total Fields:** 26  
-**Required Fields:** 8
+**Version:** 1.0<br>
+**Total Fields:** 26<br>
+**Required Fields:** 8<br>
 
-Heureka Offer Feed XML format allows e-shops to submit product information to Heureka.cz for price comparison and shopping services.
+Heureka Offer Feed XML format allows e-shops to submit product information to Heureka.cz for
+price comparison and shopping services.
 
 ## Quick Start
 
@@ -24,22 +25,22 @@ The XML feed follows this basic structure:
     <URL>https://example.com/product/123</URL>
     <PRICE_VAT>25000</PRICE_VAT>
     <CATEGORYTEXT>Heureka.cz | Electronics | Mobile Phones</CATEGORYTEXT>
-    
+
     <!-- Complex conditional field examples -->
     <PARAM>
       <VAL>128GB</VAL>
       <PARAM_NAME>Storage</PARAM_NAME>
     </PARAM>
     <PARAM/> <!-- Empty parameter -->
-    
+
     <DELIVERY>
       <DELIVERY_ID>PPL</DELIVERY_ID>
       <DELIVERY_PRICE>99</DELIVERY_PRICE>
     </DELIVERY>
-    
+
     <!-- Attribute-based field example -->
     <GIFT ID="gift_123">Free wireless headphones</GIFT>
-    
+
     <!-- Other optional fields... -->
   </SHOPITEM>
 </SHOP>

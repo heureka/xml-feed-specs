@@ -81,7 +81,7 @@ class Field:
             # Collect all possible example combinations
             child_examples = []
             has_any_examples = False
-            
+
             for child in self.child_elements:
                 if child.examples:
                     has_any_examples = True
@@ -93,9 +93,7 @@ class Field:
                     child_examples.append(f"  <{child.name}>example_value</{child.name}>")
 
             if has_any_examples and child_examples:
-                examples.append(
-                    f"<{self.name}>\n" + "\n".join(child_examples) + f"\n</{self.name}>"
-                )
+                examples.append(f"<{self.name}>\n" + "\n".join(child_examples) + f"\n</{self.name}>")
             elif child_examples:
                 # Has children but no examples
                 examples.append("No examples available")
@@ -112,7 +110,7 @@ class Field:
         if self.attributes:
             # Collect all attribute examples
             attr_combinations = []
-            
+
             for attr in self.attributes:
                 if attr.examples:
                     has_any_examples = True
@@ -125,7 +123,7 @@ class Field:
 
             if attr_combinations:
                 attr_str = " " + " ".join(attr_combinations)
-                
+
                 if self.has_text_content:
                     # Use field's own examples for text content
                     text_content_values = []
@@ -135,7 +133,7 @@ class Field:
                             text_content_values.append(example.get("value", "example_text_content"))
                     else:
                         text_content_values.append("example_text_content")
-                    
+
                     if has_any_examples:
                         for text_content in text_content_values:
                             examples.append(f"<{self.name}{attr_str}>{text_content}</{self.name}>")
@@ -173,9 +171,7 @@ class FieldCollection:
 
     def get_complex_fields(self) -> list[Field]:
         """Get all complex conditional fields."""
-        return [
-            f for f in self.fields if f.archetype == ArchetypeType.COMPLEX_CONDITIONAL
-        ]
+        return [f for f in self.fields if f.archetype == ArchetypeType.COMPLEX_CONDITIONAL]
 
     def get_attribute_fields(self) -> list[Field]:
         """Get all attribute-based fields."""

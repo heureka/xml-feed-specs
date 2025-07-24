@@ -2,14 +2,14 @@
 
 ## Overview
 
-**Element Name:** `SPECIAL_SERVICE`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
-**Multiple:** Yes (max 5)  
+**Element Name:** `SPECIAL_SERVICE`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
+**Multiple:** Yes (max 5)<br>
 
-Special service offered with the product (e.g., installation, setup, training). Maximum 5 services, each up to 128 characters.
-
+Special service offered with the product (e.g., installation, setup, training).
+Maximum 5 services, each up to 128 characters.
 
 
 ## General Constraints

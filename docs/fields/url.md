@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Element Name:** `URL`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** Yes  
+**Element Name:** `URL`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** Yes<br>
 
-Unique product page URL that displays price and add-to-cart option. Maximum 300 characters. Must be unique for each product variant.
-
+Unique product page URL that displays price and add-to-cart option. Maximum 300 characters.
+Must be unique for each product variant.
 
 
 ## General Constraints

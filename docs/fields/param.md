@@ -2,16 +2,15 @@
 
 ## Overview
 
-**Element Name:** `PARAM`  
-**Type:** string  
-**Architecture:** Complex conditional  
-**Required:** No  
-**Multiple:** Yes  
+**Element Name:** `PARAM`<br>
+**Type:** string<br>
+**Architecture:** Complex conditional<br>
+**Required:** No<br>
+**Multiple:** Yes<br>
+**Validation Rule:** Must be either empty or contain both VAL and PARAM_NAME<br>
 
-Product parameter with name-value pair. Must contain both VAL and PARAM_NAME elements when present.
-
-
-**Validation Rule:** Must be either empty or contain both VAL and PARAM_NAME
+Product parameter with name-value pair. Must contain both VAL and PARAM_NAME elements
+when present.
 
 ### Child Elements
 

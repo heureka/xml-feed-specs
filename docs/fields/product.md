@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `PRODUCT`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `PRODUCT`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
 Alternative product identifier or code. Optional field for additional product reference.
-
 
 
 ## General Constraints

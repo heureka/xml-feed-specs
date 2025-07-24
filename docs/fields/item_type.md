@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `ITEM_TYPE`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `ITEM_TYPE`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
 Type or classification of the product item for categorization purposes.
-
 
 
 ## General Constraints
