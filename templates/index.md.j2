@@ -4,12 +4,12 @@ Welcome to the comprehensive documentation for the Heureka Offer Feed XML specif
 
 ## Overview
 
-**Version:** {{ collection.version }}  
+**Version:** {{ collection.version }}<br>
 {% if collection.last_updated -%}
-**Last Updated:** {{ collection.last_updated }}  
+**Last Updated:** {{ collection.last_updated }}<br>
 {% endif %}
-**Total Fields:** {{ collection.fields | length }}  
-**Required Fields:** {{ collection.get_required_fields() | length }}
+**Total Fields:** {{ collection.fields | length }}<br>
+**Required Fields:** {{ collection.get_required_fields() | length }}<br>
 
 {% if collection.description -%}
 {{ collection.description }}
@@ -29,22 +29,22 @@ The XML feed follows this basic structure:
     <URL>https://example.com/product/123</URL>
     <PRICE_VAT>25000</PRICE_VAT>
     <CATEGORYTEXT>Heureka.cz | Electronics | Mobile Phones</CATEGORYTEXT>
-    
+
     <!-- Complex conditional field examples -->
     <PARAM>
       <VAL>128GB</VAL>
       <PARAM_NAME>Storage</PARAM_NAME>
     </PARAM>
     <PARAM/> <!-- Empty parameter -->
-    
+
     <DELIVERY>
       <DELIVERY_ID>PPL</DELIVERY_ID>
       <DELIVERY_PRICE>99</DELIVERY_PRICE>
     </DELIVERY>
-    
+
     <!-- Attribute-based field example -->
     <GIFT ID="gift_123">Free wireless headphones</GIFT>
-    
+
     <!-- Other optional fields... -->
   </SHOPITEM>
 </SHOP>
@@ -55,7 +55,7 @@ The XML feed follows this basic structure:
 | Field Name | Display Name | Type | Architecture | Required | Description |
 |------------|--------------|------|--------------|----------|-------------|
 {% for field in collection.fields -%}
-| [`{{ field.name }}`](fields/{{ field.name.lower() }}.md) | {{ field.display_name or (field.name | snake_to_title) }} | {{ field.field_type.value }} | {{ field.archetype.value }} | {{ "✓" if field.required else "○" }} | {{ field.description | truncate(80) }} |
+| [`{{ field.name }}`](fields/{{ field.name.lower() }}.md) | {{ field.display_name or (field.name | snake_to_title) }} | {{ field.field_type.value }} | {{ field.archetype.value }} | {{ "✓" if field.required else "○" }} | {{ field.description | replace('\n', ' ') | replace('\r', '') | truncate(80) }} |
 {% endfor %}
 
 ---
