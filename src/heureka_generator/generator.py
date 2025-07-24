@@ -87,9 +87,7 @@ class DocumentationGenerator:
 
             print(f"Generated {output_path}")
 
-    def _generate_index_page(
-        self, collection: FieldCollection, output_dir: Path
-    ) -> None:
+    def _generate_index_page(self, collection: FieldCollection, output_dir: Path) -> None:
         """Generate index page with overview."""
         content = self.index_template.render(collection=collection)
         output_path = output_dir / "index.md"
