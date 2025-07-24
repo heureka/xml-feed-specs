@@ -2,16 +2,15 @@
 
 ## Overview
 
-**Element Name:** `DELIVERY`  
-**Type:** string  
-**Architecture:** Complex conditional  
-**Required:** Yes  
-**Multiple:** Yes (max 100)  
+**Element Name:** `DELIVERY`<br>
+**Type:** string<br>
+**Architecture:** Complex conditional<br>
+**Required:** Yes<br>
+**Multiple:** Yes (max 100)<br>
+**Validation Rule:** Must be either empty or contain both DELIVERY_ID and DELIVERY_PRICE<br>
 
-Shipping method information. Maximum 100 different shipping methods. Must contain DELIVERY_ID and DELIVERY_PRICE when present.
-
-
-**Validation Rule:** Must be either empty or contain both DELIVERY_ID and DELIVERY_PRICE
+Shipping method information. Maximum 100 different shipping methods.
+Must contain DELIVERY_ID and DELIVERY_PRICE when present.
 
 ### Child Elements
 

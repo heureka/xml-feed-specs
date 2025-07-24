@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Element Name:** `ITEMGROUP_ID`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `ITEMGROUP_ID`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
-Group identifier for product variants (color, size, pattern variations). Maximum 36 characters. Links related product variants together.
-
+Group identifier for product variants (color, size, pattern variations).
+Maximum 36 characters. Links related product variants together.
 
 
 ## General Constraints

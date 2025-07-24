@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `HEUREKA_CPC`  
-**Type:** decimal  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `HEUREKA_CPC`<br>
+**Type:** decimal<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
 Heureka Cost Per Click bid amount. Must be a positive decimal number greater than 0.
-
 
 
 ## General Constraints

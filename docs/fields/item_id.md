@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Element Name:** `ITEM_ID`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** Yes  
+**Element Name:** `ITEM_ID`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** Yes<br>
 
-Unique product identifier within the e-shop. Maximum 36 characters. Allowed characters: a-z, A-Z, 0-9, underscore, hyphen.
-
+Unique product identifier within the e-shop. Maximum 36 characters.
+Allowed characters: a-z, A-Z, 0-9, underscore, hyphen.
 
 
 ## General Constraints

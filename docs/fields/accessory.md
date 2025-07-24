@@ -2,14 +2,13 @@
 
 ## Overview
 
-**Element Name:** `ACCESSORY`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
-**Multiple:** Yes (max 10)  
+**Element Name:** `ACCESSORY`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
+**Multiple:** Yes (max 10)<br>
 
 Related accessory product ITEM_ID. Maximum 10 accessories can be specified for cross-selling.
-
 
 
 ## General Constraints

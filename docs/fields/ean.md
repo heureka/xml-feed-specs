@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `EAN`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `EAN`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
 European Article Number (EAN-13) barcode. Must be exactly 13 digits.
-
 
 
 ## General Constraints

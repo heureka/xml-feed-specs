@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `MANUFACTURER`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
+**Element Name:** `MANUFACTURER`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
 
 Product manufacturer or brand name. Used for filtering and brand-specific searches.
-
 
 
 ## General Constraints

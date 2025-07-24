@@ -2,16 +2,15 @@
 
 ## Overview
 
-**Element Name:** `EXTENDED_WARRANTY`  
-**Type:** string  
-**Architecture:** Complex conditional  
-**Required:** No  
-**Multiple:** Yes  
+**Element Name:** `EXTENDED_WARRANTY`<br>
+**Type:** string<br>
+**Architecture:** Complex conditional<br>
+**Required:** No<br>
+**Multiple:** Yes<br>
+**Validation Rule:** Must be either empty or contain both VAL and DESC<br>
 
-Extended warranty option. Must contain both VAL (warranty period) and DESC (warranty description) when present.
-
-
-**Validation Rule:** Must be either empty or contain both VAL and DESC
+Extended warranty option. Must contain both VAL (warranty period) and DESC (warranty description)
+when present.
 
 ### Child Elements
 

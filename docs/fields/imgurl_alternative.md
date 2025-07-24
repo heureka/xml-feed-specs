@@ -2,14 +2,13 @@
 
 ## Overview
 
-**Element Name:** `IMGURL_ALTERNATIVE`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** No  
-**Multiple:** Yes (max 10)  
+**Element Name:** `IMGURL_ALTERNATIVE`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** No<br>
+**Multiple:** Yes (max 10)<br>
 
 Additional product images. Maximum 10 alternative images. Each URL maximum 255 characters.
-
 
 
 ## General Constraints

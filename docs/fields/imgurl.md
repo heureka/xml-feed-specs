@@ -2,13 +2,12 @@
 
 ## Overview
 
-**Element Name:** `IMGURL`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** Yes  
+**Element Name:** `IMGURL`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** Yes<br>
 
 Primary product image URL. Maximum 255 characters. Must start with http:// or https://.
-
 
 
 ## General Constraints

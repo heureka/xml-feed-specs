@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Element Name:** `PRODUCTNAME`  
-**Type:** string  
-**Architecture:** Simple  
-**Required:** Yes  
+**Element Name:** `PRODUCTNAME`<br>
+**Type:** string<br>
+**Architecture:** Simple<br>
+**Required:** Yes<br>
 
-Basic product name that includes all mandatory category-specific information. Maximum 200 characters.
-
+Basic product name that includes all mandatory category-specific information.
+Maximum 200 characters.
 
 
 ## General Constraints

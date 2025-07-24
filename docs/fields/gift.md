@@ -2,14 +2,14 @@
 
 ## Overview
 
-**Element Name:** `GIFT`  
-**Type:** string  
-**Architecture:** Attribute based  
-**Required:** No  
-**Multiple:** Yes  
+**Element Name:** `GIFT`<br>
+**Type:** string<br>
+**Architecture:** Attribute based<br>
+**Required:** No<br>
+**Multiple:** Yes<br>
 
-Gift item with description and ID. Content describes the gift (max 250 characters), ID attribute references the gift product.
-
+Gift item with description and ID. Content describes the gift (max 250 characters),
+ID attribute references the gift product.
 
 ## Attribute-Based Field
 
