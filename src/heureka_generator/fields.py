@@ -135,7 +135,7 @@ def create_optional_fields() -> list[Field]:
             description="European Article Number (EAN-13) barcode. Must be exactly 13 digits.",
             required=False,
             pattern=r"\d{13}",
-            examples=[{"value": "1234567890123"}],
+            examples=[{"value": "1234567890128"}],
         ),
         Field(
             name="ISBN",
@@ -145,7 +145,7 @@ def create_optional_fields() -> list[Field]:
 ISBN-13 (13 digits) format.""",
             required=False,
             pattern=r"\d{9}[\dX]|\d{13}",
-            examples=[{"value": "9781234567890"}, {"value": "123456789X"}],
+            examples=[{"value": "9781234567897"}, {"value": "123456789X"}],
         ),
         Field(
             name="ITEM_TYPE",

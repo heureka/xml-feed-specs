@@ -18,7 +18,7 @@ European Article Number (EAN-13) barcode. Must be exactly 13 digits.
 ## XML Examples
 
 ```xml
-<EAN>1234567890123</EAN>
+<EAN>1234567890128</EAN>
 ```
 
 
